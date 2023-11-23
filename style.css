@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: unset;
+  outline: none;
+}
+
+:root {
+  --color-1: #333c4b;
+  --color-2: #d4a056;
+  --color-3: #4a4c5c;
+  --color-4: #ffffff;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-1);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: var(--color-3);
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h2 {
+  color: var(--color-2);
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--color-4);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+button {
+  padding: 16px 50px;
+  background: var(--color-2);
+  color: var(--color-4);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0px 40px 40px 0px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  color: var(--color-2);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(unchecked.svg);
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: var(--color-4);
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(checklist.svg);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: var(--color-1);
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span {
+  background: var(--color-2);
+}
